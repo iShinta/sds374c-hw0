@@ -28,10 +28,10 @@ void count(double *y, int n, double t, int res){
     for(j = 1; j < n - 1; j++){
       if(y[i*n + j] < t){
         res++;
-        printf("%i", res);
       }
     }
   }
+  printf("%i", res);
 }
 
 int main(){
