@@ -38,6 +38,7 @@ void smooth(double *x, double*y, int n, double a, double b, double c){
 
 void count(double *y, int n, double t, int res){
   int i, j;
+  res = 0;
   for(i = 1; i < n - 1; i++){
     for(j = 1; j < n - 1; j++){
       if(y[i*n + j] < t){
@@ -84,8 +85,6 @@ int main(){
   i5 = clock();
   count(y, n, t, resy);
   i6 = clock();
-
-  resx = 123456789;
 
   printf("Summary\n");
   printf("-------\n");
