@@ -100,7 +100,12 @@ int main(){
   printf("Fraction  of elements below threshold     ::              %f\n", ((double)resy/((n-2)*(n-2))));
   printf("\nAction        ::  time/s    Time Resolution = 1.0E-04\n");
   printf("-------\n");
-  printf("CPU: Alloc-X    ::  %f", (i2 - i1) / (float)CLOCKS_PER_SEC);
+  printf("CPU: Alloc-X    ::  %f\n", (i1 - i0) / (float)CLOCKS_PER_SEC);
+  printf("CPU: Alloc-Y    ::  %f\n", (i2 - i1) / (float)CLOCKS_PER_SEC);
+  printf("CPU: Init-X    ::  %f\n", (i3 - i2) / (float)CLOCKS_PER_SEC);
+  printf("CPU: Smooth    ::  %f\n", (i4 - i3) / (float)CLOCKS_PER_SEC);
+  printf("CPU: Count-X    ::  %f\n", (i5 - i4) / (float)CLOCKS_PER_SEC);
+  printf("CPU: Count-Y    ::  %f\n", (i6 - i5) / (float)CLOCKS_PER_SEC);
 
   return 0;
 }
