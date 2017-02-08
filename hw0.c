@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#define N 10
 
 //Use single precision float/real variables throughout the excercise.
 public void initialize(double *x, double n){
