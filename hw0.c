@@ -62,15 +62,15 @@ int main(){
 
   printf("Summary\n");
   printf("-------\n");
-  printf("Number of elements in a row/column        ::              %i", n);
-  printf("Number of inner elements in a row/column  ::              %i", n-2);
-  printf("Total number of elements                  ::              %i", n*n);
-  printf("Total number of inner elements            ::              %i", (n-2)*(n-2));
-  printf("Memory (GB) used per array)               ::              %d", sizeof(double));
-  printf("Threshold                                 ::              %d", t);
-  printf("Smoothing constants (a, b, c)             :: %d %d %d", a, b, c);
-  printf("Number    of elements below threshold (X) ::              %i", resx);
-  printf("Fraction  of elements below threshold     ::              %d", (double)(resx/(n*n)));
-  printf("Number    of elements below threshold (Y) ::              %i", resy);
-  printf("Fraction  of elements below threshold     ::              %d", (double)(resy/((n-2)*(n-2))));
+  printf("Number of elements in a row/column        ::              %i\n", n);
+  printf("Number of inner elements in a row/column  ::              %i\n", n-2);
+  printf("Total number of elements                  ::              %i\n", n*n);
+  printf("Total number of inner elements            ::              %i\n", (n-2)*(n-2));
+  printf("Memory (GB) used per array)               ::              %d\n", sizeof(double));
+  printf("Threshold                                 ::              %d\n", t);
+  printf("Smoothing constants (a, b, c)             :: %d %d %d\n", a, b, c);
+  printf("Number    of elements below threshold (X) ::              %i\n", resx);
+  printf("Fraction  of elements below threshold     ::              %d\n", (double)(resx/(n*n)));
+  printf("Number    of elements below threshold (Y) ::              %i\n", resy);
+  printf("Fraction  of elements below threshold     ::              %d\n", (double)(resy/((n-2)*(n-2))));
 }
