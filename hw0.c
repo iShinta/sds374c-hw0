@@ -44,13 +44,16 @@ void smooth(double *x, double*y, int n, double a, double b, double c){
 
 void count(double *y, int n, double t, int *res){
   int i, j;
+  int result;
+  result = 0;
   for(i = 1; i < n - 1; i++){
     for(j = 1; j < n - 1; j++){
       if(y[i*n + j] < t){
-        res++;
+        result++;
       }
     }
   }
+  res = result;
   printf("%i\n", res);
 }
 
@@ -64,9 +67,7 @@ int main(){
 
   double i0, i1, i2, i3, i4, i5, i6;
 
-  int resx, resy;
-  resx = 0;
-  resy = 0;
+  int *resx, *resy;
   const double a = 0.05;
   const double b = 0.1;
   const double c = 0.4;
