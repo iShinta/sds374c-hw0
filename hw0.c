@@ -55,7 +55,7 @@ int main(){
   //srand(unsigned int seed);
   srand(time(NULL));
 
-  double i0, i1
+  double i0, i1, i2, i3, i4, i5, i6;
 
   int resx, resy;
   const double a = 0.05;
