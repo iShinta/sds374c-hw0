@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
 //Use single precision float/real variables throughout the excercise.
 void initialize(double *x, int n){
@@ -34,11 +35,18 @@ void count(double *y, int n, double t, int res){
       }
     }
   }
-  printf("Finish la\n");
+  printf("Summary\n");
+  printf("-------\n");
+  printf("Number of elements in a row/column        ::              %i", n);
+  printf("Number of inner elements in a row/column  ::              %i", n-2);
+  printf("Total number of elements                  ::              %i", n*n);
+  printf("Total number of inner elements            ::              %i", (n-2)*(n-2));
+  //printf("Memory (GB) used per array)              ::              %d", );
   printf("%i\n", res);
 }
 
 int main(){
+  srand(time(NULL));
   int res;
   const double a = 0.05;
   const double b = 0.1;
