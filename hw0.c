@@ -19,6 +19,12 @@ void initialize(double *x, int n){
       random = (double)((rand()%10000)/(double)10000);
       //printf("%9.7f\n", random);
       x[i*n + j] = random;
+      if(x[i*n + j] < 0){
+        printf("Val < 0\n");
+      }
+      if(x[i*n + j] > 1){
+        printf("Val > 1\n");
+      }
       //printf("%9.7f\n", random);
       //printf("%9.7f\n", x[i*n + j]);
     }
@@ -38,7 +44,6 @@ void smooth(double *x, double*y, int n, double a, double b, double c){
 
 void count(double *y, int n, double t, int res){
   int i, j;
-  res = 0;
   for(i = 1; i < n - 1; i++){
     for(j = 1; j < n - 1; j++){
       if(y[i*n + j] < t){
@@ -59,6 +64,8 @@ int main(){
   double i0, i1, i2, i3, i4, i5, i6;
 
   int resx, resy;
+  resx = 0;
+  resy = 0;
   const double a = 0.05;
   const double b = 0.1;
   const double c = 0.4;
