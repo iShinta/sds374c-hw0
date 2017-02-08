@@ -11,7 +11,7 @@ void initialize(double *x, int n){
       //temp = (double)((float)rand() / (float)RAND_MAX);
       temp = (double)rand() / (double)((unsigned)RAND_MAX);
       x[i*n + j] = temp;
-      //printf("%d\n", temp);
+      printf("%d\n", temp);
     }
   }
 }
@@ -39,6 +39,7 @@ void count(double *y, int n, double t, int res){
 }
 
 int main(){
+  srand(time(0));
   int resx, resy;
   const double a = 0.05;
   const double b = 0.1;
