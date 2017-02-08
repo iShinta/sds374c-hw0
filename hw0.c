@@ -1,8 +1,8 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include <stdio.h>;
+#include <stdlib.h>;
 
 //Use single precision float/real variables throughout the excercise.
-public void initialize(double *x, double n){
+void initialize(double *x, double n){
   for(i = 0; i < n; i++){
     for(j = 0; j < n; j++){
       x[i*n + j] = (double)(rand() / (float)RAND_MAX);
@@ -10,7 +10,7 @@ public void initialize(double *x, double n){
   }
 }
 
-public void smooth(double *x, double*y, int n, double a, double b, double c){
+void smooth(double *x, double*y, int n, double a, double b, double c){
   for(i = 1; i < n - 1; i++){
     for(j = 1; j < n - 1; j++){
       y[i*n + j] = a * (x[(i-1)*n+(j-1)] + x[(i-1)*n+(j+1)] + x[(i+1)*n+(j-1)] + x[(i+1)*n+(j+1)])
@@ -20,7 +20,7 @@ public void smooth(double *x, double*y, int n, double a, double b, double c){
   }
 }
 
-public void count(double *y, int n, double t, int res){
+void count(double *y, int n, double t, int res){
   for(i = 1; i < n - 1; i++){
     for(j = 1; j < n - 1; j++){
       if(y[i*n + j] < t){
