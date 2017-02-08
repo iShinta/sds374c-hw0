@@ -12,7 +12,7 @@ void initialize(double *x, int n){
       //temp = (double)rand() / (double)((unsigned)RAND_MAX);
       temp = rand();
       x[i*n + j] = temp;
-      printf("%d\n", temp);
+      //printf("%d\n", temp);
     }
   }
 }
@@ -46,6 +46,12 @@ int main(){
   //srand(time(0));
   //srand(unsigned int seed);
   srand(time(NULL));
+
+  int random;
+  while(10--){
+    random = rand()%1000 + 1;
+    printf("%d\n", random);
+  }
 
   int resx, resy;
   const double a = 0.05;
@@ -81,4 +87,6 @@ int main(){
   printf("Fraction  of elements below threshold     ::              %d\n", (double)(resx/(n*n)));
   printf("Number    of elements below threshold (Y) ::              %i\n", resy);
   printf("Fraction  of elements below threshold     ::              %d\n", (double)(resy/((n-2)*(n-2))));
+
+  return 0;
 }
