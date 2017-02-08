@@ -93,7 +93,7 @@ int main(){
   printf("Total number of inner elements            ::              %i\n", (n-2)*(n-2));
   printf("Memory (GB) used per array                ::              %f\n", sizeof(double)*n*n);
   printf("Threshold                                 ::              %f\n", t);
-  printf("Smoothing constants (a, b, c)             :: %3.2f %3.2f %3.2f\n", a, b, c);
+  printf("Smoothing constants (a, b, c)             ::              %3.2f %3.2f %3.2f\n", a, b, c);
   printf("Number    of elements below threshold (X) ::              %i\n", resx);
   printf("Fraction  of elements below threshold     ::              %f\n", ((double)resx/(n*n)));
   printf("Number    of elements below threshold (Y) ::              %i\n", resy);
