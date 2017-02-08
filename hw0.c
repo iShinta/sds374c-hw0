@@ -18,7 +18,7 @@ void initialize(double *x, int n){
 
       nest = 10;
       while(nest--){
-        random = rand()%1000 + 1;
+        random = rand()%1 + 1;
         printf("%d\n", random);
       }
 
