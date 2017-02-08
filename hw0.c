@@ -10,7 +10,7 @@ void initialize(double *x, int n){
     for(j = 0; j < n; j++){
       temp = (double)((float)rand() / (float)RAND_MAX);
       x[i*n + j] = temp;
-      printf("%d\n", temp);
+      //printf("%d\n", temp);
     }
   }
 }
@@ -35,19 +35,11 @@ void count(double *y, int n, double t, int res){
       }
     }
   }
-  printf("Summary\n");
-  printf("-------\n");
-  printf("Number of elements in a row/column        ::              %i", n);
-  printf("Number of inner elements in a row/column  ::              %i", n-2);
-  printf("Total number of elements                  ::              %i", n*n);
-  printf("Total number of inner elements            ::              %i", (n-2)*(n-2));
-  //printf("Memory (GB) used per array)              ::              %d", );
-  printf("%i\n", res);
 }
 
 int main(){
   srand(time(NULL));
-  int res;
+  int resx, int resy;
   const double a = 0.05;
   const double b = 0.1;
   const double c = 0.4;
@@ -65,5 +57,21 @@ int main(){
 
   initialize(x, n);
   smooth(x, y, n, a, b, c);
-  count(y, n, t, res);
+  count(x, n, t, resx);
+  count(y, n, t, resy);
+
+  printf("Summary\n");
+  printf("-------\n");
+  printf("Number of elements in a row/column        ::              %i", n);
+  printf("Number of inner elements in a row/column  ::              %i", n-2);
+  printf("Total number of elements                  ::              %i", n*n);
+  printf("Total number of inner elements            ::              %i", (n-2)*(n-2));
+  printf("Memory (GB) used per array)               ::              %d", sizeof(double));
+  printf("Threshold                                 ::              %d", t);
+  printf("Smoothing constants (a, b, c)             :: %d %d %d", a, b, c);
+  printf("Number    of elements below threshold (X) ::              %i", resx);
+  printf("Fraction  of elements below threshold     ::              %d", (double)(resx/(n*n)));
+  printf("Number    of elements below threshold (Y) ::              %i", resy);
+  printf("Fraction  of elements below threshold     ::              %d", (double)(resy/((n-2)*(n-2))));
+  printf("%i\n", res);
 }
