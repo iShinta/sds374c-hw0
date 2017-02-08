@@ -31,6 +31,7 @@ void count(double *y, int n, double t, int res){
       }
     }
   }
+  printf("Finish la");
   printf("%i", res);
 }
 
