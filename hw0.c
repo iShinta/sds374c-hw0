@@ -7,7 +7,7 @@ void initialize(double *x, int n){
   double temp;
   for(i = 0; i < n; i++){
     for(j = 0; j < n; j++){
-      temp = (double)((float)random() / (float)RAND_MAX);
+      temp = (double)((float)rand() / (float)RAND_MAX);
       x[i*n + j] = temp;
       printf("%d\n", temp);
     }
