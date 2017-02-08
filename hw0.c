@@ -4,16 +4,13 @@
 
 //Use single precision float/real variables throughout the excercise.
 void initialize(double *x, int n){
-  struct timeval t1;
-  gettimeofday(&t1, NULL);
-  srand(t1.tv_usec * t1.tv_sec);
-  //srand(time(0));
   int i, j;
   double temp;
   for(i = 0; i < n; i++){
     for(j = 0; j < n; j++){
       //temp = (double)((float)rand() / (float)RAND_MAX);
-      temp = (double)rand() / (double)((unsigned)RAND_MAX);
+      //temp = (double)rand() / (double)((unsigned)RAND_MAX);
+      temp = rand();
       x[i*n + j] = temp;
       printf("%d\n", temp);
     }
@@ -43,6 +40,13 @@ void count(double *y, int n, double t, int res){
 }
 
 int main(){
+  //struct timeval t1;
+  //gettimeofday(&t1, NULL);
+  //srand(t1.tv_usec * t1.tv_sec);
+  //srand(time(0));
+  //srand(unsigned int seed);
+  srand(time(NULL));
+
   int resx, resy;
   const double a = 0.05;
   const double b = 0.1;
