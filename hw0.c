@@ -68,6 +68,8 @@ int main(){
   double i0, i1, i2, i3, i4, i5, i6;
 
   int *resx, *resy;
+  resx = (int *) malloc(sizeof(int));
+  resy = (int *) malloc(sizeof(int));
   const double a = 0.05;
   const double b = 0.1;
   const double c = 0.4;
