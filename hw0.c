@@ -5,6 +5,7 @@
 //Use single precision float/real variables throughout the excercise.
 void initialize(double *x, int n){
   int i, j;
+  int random, nest;
   double temp;
   for(i = 0; i < n; i++){
     for(j = 0; j < n; j++){
@@ -13,6 +14,14 @@ void initialize(double *x, int n){
       temp = rand();
       x[i*n + j] = temp;
       //printf("%d\n", temp);
+
+
+      nest = 10;
+      while(nest--){
+        random = rand()%1000 + 1;
+        printf("%d\n", random);
+      }
+
     }
   }
 }
@@ -46,13 +55,6 @@ int main(){
   //srand(time(0));
   //srand(unsigned int seed);
   srand(time(NULL));
-
-  int random, nest;
-  nest = 10;
-  while(nest--){
-    random = rand()%1000 + 1;
-    printf("%d\n", random);
-  }
 
   int resx, resy;
   const double a = 0.05;
