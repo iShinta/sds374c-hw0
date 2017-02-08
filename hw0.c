@@ -38,7 +38,9 @@ void count(double *y, int n, double t, int res){
 }
 
 int main(){
-  srand(time(NULL));
+  timeval t1;
+  gettimeofday(&t1, NULL);
+  srand(t1.tv_usec * t1.tv_sec)
   int resx, resy;
   const double a = 0.05;
   const double b = 0.1;
