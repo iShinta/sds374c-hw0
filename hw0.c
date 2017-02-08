@@ -47,9 +47,9 @@ int main(){
   //srand(unsigned int seed);
   srand(time(NULL));
 
-  int random, n;
-  n = 10;
-  while(n--){
+  int random, nest;
+  nest = 10;
+  while(nest--){
     random = rand()%1000 + 1;
     printf("%d\n", random);
   }
