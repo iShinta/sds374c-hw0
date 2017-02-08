@@ -16,11 +16,11 @@ void initialize(double *x, int n){
       // x[i*n + j] = temp;
       // printf("%d\n", temp);
 
-
-
       random = (double)((rand()%10000)/(double)10000);
       printf("%9.7f\n", random);
-
+      x[i*n + j] = random;
+      printf("%9.7f\n", random);
+      printf("%9.7f\n", x[i*n + j]);
     }
   }
 }
