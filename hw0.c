@@ -51,6 +51,7 @@ void count(double *y, int n, double t, int res){
       }
     }
   }
+  printf("%i\n", res);
 }
 
 int main(){
