@@ -20,7 +20,7 @@ void initialize(double *x, int n){
       //printf("%9.7f\n", random);
       x[i*n + j] = random;
       //printf("%9.7f\n", random);
-      printf("%9.7f\n", x[i*n + j]);
+      //printf("%9.7f\n", x[i*n + j]);
     }
   }
 }
