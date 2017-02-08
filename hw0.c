@@ -39,7 +39,7 @@ void count(double *y, int n, double t, int res){
 
 int main(){
   srand(time(NULL));
-  int resx, int resy;
+  int resx, resy;
   const double a = 0.05;
   const double b = 0.1;
   const double c = 0.4;
@@ -73,5 +73,4 @@ int main(){
   printf("Fraction  of elements below threshold     ::              %d", (double)(resx/(n*n)));
   printf("Number    of elements below threshold (Y) ::              %i", resy);
   printf("Fraction  of elements below threshold     ::              %d", (double)(resy/((n-2)*(n-2))));
-  printf("%i\n", res);
 }
