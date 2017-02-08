@@ -55,6 +55,8 @@ int main(){
   //srand(unsigned int seed);
   srand(time(NULL));
 
+  double i0, i1
+
   int resx, resy;
   const double a = 0.05;
   const double b = 0.1;
@@ -68,13 +70,20 @@ int main(){
   //2D arrays have to be contiguous in memory
   double *x, *y;
 
+  i0 = clock();
   x = (double *) malloc(n * n * sizeof(double)); //allocate n*n doubles
+  i1 = clock();
   y = (double *) malloc(n * n * sizeof(double)); //allocate n*n doubles
 
+  i2 = clock();
   initialize(x, n);
+  i3 = clock();
   smooth(x, y, n, a, b, c);
+  i4 = clock();
   count(x, n, t, resx);
+  i5 = clock();
   count(y, n, t, resy);
+  i6 = clock();
 
   printf("Summary\n");
   printf("-------\n");
@@ -84,11 +93,14 @@ int main(){
   printf("Total number of inner elements            ::              %i\n", (n-2)*(n-2));
   printf("Memory (GB) used per array)               ::              %f\n", sizeof(double));
   printf("Threshold                                 ::              %f\n", t);
-  printf("Smoothing constants (a, b, c)             :: %d %d %d\n", a, b, c);
+  printf("Smoothing constants (a, b, c)             :: %f %f %f\n", a, b, c);
   printf("Number    of elements below threshold (X) ::              %i\n", resx);
   printf("Fraction  of elements below threshold     ::              %f\n", ((double)resx/(n*n)));
   printf("Number    of elements below threshold (Y) ::              %i\n", resy);
   printf("Fraction  of elements below threshold     ::              %f\n", ((double)resy/((n-2)*(n-2))));
+  printf("\nAction        ::  time/s    Time Resolution = 1.0E-04\n");
+  printf("-------\n");
+  printf("CPU: Alloc-X    ::  %f", (i2 - i1) / (float)CLOCKS_PER_SEC);
 
   return 0;
 }
