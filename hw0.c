@@ -4,10 +4,12 @@
 //Use single precision float/real variables throughout the excercise.
 void initialize(double *x, int n){
   int i, j;
+  double temp;
   for(i = 0; i < n; i++){
     for(j = 0; j < n; j++){
-      x[i*n + j] = (double)(random() / (float)RAND_MAX);
-      printf("%d\n", x[i*n + j]);
+      temp = (double)((float)random() / (float)RAND_MAX);
+      x[i*n + j] = temp;
+      printf("%d\n", temp);
     }
   }
 }
