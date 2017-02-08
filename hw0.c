@@ -56,7 +56,7 @@ void count(double *y, int n, double t, int *res){
   //res = result;
   *res = result;
   //res = &result;
-  printf("%i\n", res);
+  //printf("%i\n", res);
 }
 
 int main(){
