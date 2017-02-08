@@ -19,7 +19,7 @@ void initialize(double *x, int n){
       nest = 10;
       while(nest--){
         random = (double)((rand()%10000)/10000);
-        printf("%d\n", random);
+        printf("%a\n", random);
       }
 
     }
