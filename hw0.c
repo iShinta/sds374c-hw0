@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 //Use single precision float/real variables throughout the excercise.
-void initialize(double *x, double n){
+void initialize(double *x, int n){
   int i, j;
   for(i = 0; i < n; i++){
     for(j = 0; j < n; j++){
