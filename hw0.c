@@ -91,7 +91,7 @@ int main(){
   printf("Number of inner elements in a row/column  ::              %i\n", n-2);
   printf("Total number of elements                  ::              %i\n", n*n);
   printf("Total number of inner elements            ::              %i\n", (n-2)*(n-2));
-  printf("Memory (GB) used per array)               ::              %f\n", sizeof(double));
+  printf("Memory (GB) used per array)               ::              %f\n", sizeof(double)*n*n);
   printf("Threshold                                 ::              %f\n", t);
   printf("Smoothing constants (a, b, c)             :: %f %f %f\n", a, b, c);
   printf("Number    of elements below threshold (X) ::              %i\n", resx);
