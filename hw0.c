@@ -12,16 +12,16 @@ void initialize(double *x, int n){
     for(j = 0; j < n; j++){
       //temp = (double)((float)rand() / (float)RAND_MAX);
       //temp = (double)rand() / (double)((unsigned)RAND_MAX);
-      temp = rand();
+      temp = (double)((rand()%10000)/(double)10000);
       x[i*n + j] = temp;
-      //printf("%d\n", temp);
+      printf("%d\n", temp);
 
 
-      nest = 10;
-      while(nest--){
-        random = (double)((rand()%10000)/(double)10000);
-        printf("%9.7f\n", random);
-      }
+      // nest = 10;
+      // while(nest--){
+      //   random = (double)((rand()%10000)/(double)10000);
+      //   printf("%9.7f\n", random);
+      // }
 
     }
   }
