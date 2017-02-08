@@ -6,7 +6,7 @@ void initialize(double *x, int n){
   int i, j;
   for(i = 0; i < n; i++){
     for(j = 0; j < n; j++){
-      x[i*n + j] = (double)(rand() / (float)RAND_MAX);
+      x[i*n + j] = (double)(random() / (float)RAND_MAX);
       printf("%d\n", x[i*n + j]);
     }
   }
