@@ -53,7 +53,9 @@ void count(double *y, int n, double t, int *res){
       }
     }
   }
-  res = result;
+  //res = result;
+  *res = result;
+  //res = &result;
   printf("%i\n", res);
 }
 
@@ -67,9 +69,9 @@ int main(){
 
   double i0, i1, i2, i3, i4, i5, i6;
 
-  int *resx, *resy;
-  resx = (int *) malloc(sizeof(int));
-  resy = (int *) malloc(sizeof(int));
+  int resx = 0, resy = 0;
+  // resx = (int *) malloc(sizeof(int));
+  // resy = (int *) malloc(sizeof(int));
   const double a = 0.05;
   const double b = 0.1;
   const double c = 0.4;
@@ -92,9 +94,9 @@ int main(){
   i3 = clock();
   smooth(x, y, n, a, b, c);
   i4 = clock();
-  count(x, n, t, resx);
+  count(x, n, t, &resx);
   i5 = clock();
-  count(y, n, t, resy);
+  count(y, n, t, &resy);
   i6 = clock();
 
   printf("Summary\n");
@@ -107,9 +109,9 @@ int main(){
   printf("Threshold                                 ::              %3.2f\n", t);
   printf("Smoothing constants (a, b, c)             ::              %3.2f %3.2f %3.2f\n", a, b, c);
   printf("Number    of elements below threshold (X) ::              %i\n", resx);
-  printf("Fraction  of elements below threshold     ::              %f\n", ((double)*resx/(n*n)));
+  printf("Fraction  of elements below threshold     ::              %f\n", ((double)resx/(n*n)));
   printf("Number    of elements below threshold (Y) ::              %i\n", resy);
-  printf("Fraction  of elements below threshold     ::              %f\n", ((double)*resy/((n-2)*(n-2))));
+  printf("Fraction  of elements below threshold     ::              %f\n", ((double)resy/((n-2)*(n-2))));
   printf("\nAction        ::  time/s    Time Resolution = 1.0E-04\n");
   printf("-------\n");
   printf("CPU: Alloc-X    ::  %f\n", (i1 - i0) / (float)CLOCKS_PER_SEC);
