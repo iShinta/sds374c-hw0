@@ -4,6 +4,10 @@
 
 //Use single precision float/real variables throughout the excercise.
 void initialize(double *x, int n){
+  struct timeval t1;
+  gettimeofday(&t1, NULL);
+  srand(t1.tv_usec * t1.tv_sec);
+  //srand(time(0));
   int i, j;
   double temp;
   for(i = 0; i < n; i++){
@@ -39,10 +43,6 @@ void count(double *y, int n, double t, int res){
 }
 
 int main(){
-  struct timeval t1;
-  gettimeofday(&t1, NULL);
-  srand(t1.tv_usec * t1.tv_sec);
-  //srand(time(0));
   int resx, resy;
   const double a = 0.05;
   const double b = 0.1;
