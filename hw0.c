@@ -5,7 +5,8 @@
 //Use single precision float/real variables throughout the excercise.
 void initialize(double *x, int n){
   int i, j;
-  int random, nest;
+  double random;
+  int nest;
   double temp;
   for(i = 0; i < n; i++){
     for(j = 0; j < n; j++){
@@ -18,7 +19,7 @@ void initialize(double *x, int n){
 
       nest = 10;
       while(nest--){
-        random = (double)((rand()%10)/10);
+        random = (double)((rand()%10000)/(double)10000);
         printf("%9.7f\n", random);
       }
 
